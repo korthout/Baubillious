@@ -1,12 +1,9 @@
-package nl.korthout.baubillious.neuralnet;
+package nl.korthout.baubillious.neuralnet.graph;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by nicokorthout on 24/04/2017.
- */
 public class Graph {
 
     private List<Node> nodes;

@@ -1,5 +1,9 @@
 package nl.korthout.baubillious.neuralnet;
 
+import nl.korthout.baubillious.neuralnet.graph.Edge;
+import nl.korthout.baubillious.neuralnet.graph.Graph;
+import nl.korthout.baubillious.neuralnet.graph.Node;
+
 import java.util.List;
 
 public class GraphGenerator {

@@ -1,8 +1,5 @@
-package nl.korthout.baubillious.neuralnet;
+package nl.korthout.baubillious.neuralnet.graph;
 
-/**
- * Created by nicokorthout on 24/04/2017.
- */
 public class Edge {
 
     private final Node nodeA;

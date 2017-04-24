@@ -1,5 +1,7 @@
 package nl.korthout.baubillious.neuralnet;
 
+import nl.korthout.baubillious.neuralnet.graph.Graph;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
@@ -50,4 +52,5 @@ public class GraphGeneratorTest {
         assertThat("All Nodes must have at least 100 neighbours",
                 graph.getNodes().stream().allMatch(x -> x.numberOfNeighbours() >= 100));
     }
+
 }
