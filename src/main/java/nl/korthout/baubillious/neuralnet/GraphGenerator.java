@@ -1,23 +1,26 @@
 package nl.korthout.baubillious.neuralnet;
 
+import java.util.List;
+
 import nl.korthout.baubillious.neuralnet.graph.Edge;
 import nl.korthout.baubillious.neuralnet.graph.Graph;
 import nl.korthout.baubillious.neuralnet.graph.Node;
 
-import java.util.List;
-
 public class GraphGenerator {
 
-    private int nodes;
+    public static final int DEFAULT_NUMBER_OF_NODES = 1;
+    public static final int DEFAULT_MIN_NEIGHBOURS = 1;
+
+    private int numberOfNodes;
     private int minNeighbours;
 
     public GraphGenerator() {
-        nodes = 0;
-        minNeighbours = 0;
+        numberOfNodes = DEFAULT_NUMBER_OF_NODES;
+        minNeighbours = DEFAULT_MIN_NEIGHBOURS;
     }
 
     public GraphGenerator nodes(int number) {
-        this.nodes = number;
+        this.numberOfNodes = number;
         return this;
     }
 
@@ -28,21 +31,34 @@ public class GraphGenerator {
 
     public Graph generate() {
         Graph graph = new Graph();
-
-        for (int i=0; i<nodes; i++) {
-            Node node = new Node();
-
-            List<Node> randomNodes = graph.getRandomNodes(Math.min(minNeighbours, i));
-            for (Node randomNode: randomNodes) {
-                Edge edge = new Edge(randomNode, node);
-                randomNode.addNeighbour(edge);
-                node.addNeighbour(edge);
-            }
-
-            graph.addNode(node);
-        }
-
+        generateNodes(graph);
         return graph;
+    }
+
+    private void generateNodes(Graph graph) {
+        for (int i = 0; i < numberOfNodes; i++) {
+            createRandomNode(graph);
+        }
+    }
+
+    private void createRandomNode(Graph graph) {
+        Node node = new Node();
+        createEdgesToRandomExistingNodes(graph, node);
+        graph.addNode(node);
+    }
+
+    private void createEdgesToRandomExistingNodes(Graph graph, Node node) {
+        int numberOfPossibleNeighbours = Math.min(minNeighbours, graph.size());
+        List<Node> randomExistingNodes = graph.getRandomNodes(numberOfPossibleNeighbours);
+        for (Node randomNode: randomExistingNodes) {
+            createEdge(randomNode, node);
+        }
+    }
+
+    private void createEdge(Node node, Node other) {
+        Edge edge = new Edge(node, other);
+        other.addNeighbour(edge);
+        node.addNeighbour(edge);
     }
 
 }

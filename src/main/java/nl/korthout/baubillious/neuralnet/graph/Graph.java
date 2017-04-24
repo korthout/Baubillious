@@ -23,7 +23,7 @@ public class Graph {
     /**
      * Returns a list of random nodes from the graph.
      * A best effort is made to return as many nodes as requested.
-     * However, the number of nodes in the graph may be lower than requested.
+     * However, there may be fewer nodes in the graph than requested.
      */
     public List<Node> getRandomNodes(int requestedNumber) {
         List<Node> shuffledNodes = new ArrayList<>(nodes);
