@@ -4,7 +4,7 @@ import nl.korthout.baubillious.brain.graph.Node;
 
 public class Sensor extends Node {
 
-    protected static final int POWER = 10;
+    protected static final int POWER = 50;
 
     private final Stimulable stimulable;
 
