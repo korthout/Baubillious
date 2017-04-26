@@ -1,15 +1,11 @@
-package nl.korthout.baubillious.neuralnet;
+package nl.korthout.baubillious.brain.graph;
 
 import java.util.List;
 
-import nl.korthout.baubillious.neuralnet.graph.Edge;
-import nl.korthout.baubillious.neuralnet.graph.Graph;
-import nl.korthout.baubillious.neuralnet.graph.Node;
-
 public class GraphGenerator {
 
-    public static final int DEFAULT_NUMBER_OF_NODES = 1;
-    public static final int DEFAULT_MIN_NEIGHBOURS = 1;
+    private static final int DEFAULT_NUMBER_OF_NODES = 1;
+    private static final int DEFAULT_MIN_NEIGHBOURS = 1;
 
     private int numberOfNodes;
     private int minNeighbours;

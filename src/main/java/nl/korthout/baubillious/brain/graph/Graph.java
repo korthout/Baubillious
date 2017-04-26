@@ -1,4 +1,4 @@
-package nl.korthout.baubillious.neuralnet.graph;
+package nl.korthout.baubillious.brain.graph;
 
 import java.util.ArrayList;
 import java.util.Collections;

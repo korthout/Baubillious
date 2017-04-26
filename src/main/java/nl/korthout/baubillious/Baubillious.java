@@ -1,7 +1,7 @@
 package nl.korthout.baubillious;
 
-import nl.korthout.baubillious.neuralnet.GraphGenerator;
-import nl.korthout.baubillious.neuralnet.graph.Graph;
+import nl.korthout.baubillious.brain.graph.GraphGenerator;
+import nl.korthout.baubillious.brain.graph.Graph;
 
 public class Baubillious {
 
