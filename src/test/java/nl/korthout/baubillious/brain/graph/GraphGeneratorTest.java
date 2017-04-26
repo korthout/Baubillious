@@ -1,12 +1,10 @@
-package nl.korthout.baubillious.neuralnet;
+package nl.korthout.baubillious.brain.graph;
 
-import nl.korthout.baubillious.neuralnet.graph.Graph;
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
-
-import org.junit.Test;
 
 public class GraphGeneratorTest {
 
