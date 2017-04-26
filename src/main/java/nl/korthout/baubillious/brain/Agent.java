@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Agent {
 
-    private static final int DEFAULT_NUMBER_OF_NODES = 1000;
+    private static final int DEFAULT_NUMBER_OF_NODES = 10000;
     private static final int DEFAULT_MIN_NEIGHBOURS = 2;
 
     private final List<Sensor> input;
@@ -62,7 +62,6 @@ public class Agent {
     }
 
     public void checkSensors() {
-        System.out.println("Check sensors");
         for (Sensor sensor : input) {
             sensor.sense();
         }
