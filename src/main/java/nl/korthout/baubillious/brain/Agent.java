@@ -62,6 +62,7 @@ public class Agent {
     }
 
     public void checkSensors() {
+        System.out.println("Check sensors");
         for (Sensor sensor : input) {
             sensor.sense();
         }
